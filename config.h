@@ -113,7 +113,7 @@ static const char *colorname[] = {
 	"#d5c4a1", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
 	"#282828", /* 258 -> bg */
-	"#ebdbb2", /* 259 -> fg */
+	"#d5c4a1", /* 259 -> fg */
 };
 
 /* Terminal colors for alternate (light) palette */
