@@ -12,7 +12,7 @@ static char *font2[] = {
         "Noto Color Emoji:style=Regular:pixelsize=12:antialias=true:autohint=true",
         "Hack:style=Bold:pixelsize=14:antialias=true:autohint=true",
 };
-static int borderpx = 5;
+static int borderpx = 3;
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
@@ -67,7 +67,7 @@ static unsigned int cursorthickness = 2;
  *    Bold affects lines thickness if boxdraw_bold is not 0. Italic is ignored.
  * 0: disable (render all U25XX glyphs normally from the font).
  */
-const int boxdraw = 0;
+const int boxdraw = 1;
 const int boxdraw_bold = 0;
 
 /* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
@@ -97,7 +97,7 @@ char *termname = "st-256color";
  *
  *      stty tabs
  */
-unsigned int tabspaces = 4;
+unsigned int tabspaces = 8;
 
 /* bg opacity */
 float alpha = 0.85;
@@ -280,9 +280,9 @@ static Shortcut shortcuts[] = {
         { XK_NO_MOD,            XK_F6,          swapcolors,     {.i =  0} },
         { ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
         { ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
-        { MODKEY,               XK_t,           externalpipe,   {.v = openurlcmd } },
+        { MODKEY,               XK_u,           externalpipe,   {.v = openurlcmd } },
         { MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
-        { MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
+        { ShiftMask,            XK_c,           externalpipe,   {.v = copyoutput } },
 };
 
 /*
