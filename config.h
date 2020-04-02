@@ -9,8 +9,8 @@ static char *font = "JetBrainsMonoMedium Nerd Font:style=Medium:pixelsize=14:ant
 /* Spare fonts */
 
 static char *font2[] = {
+        "Font Awesome:style=Regular:pixelsize=12:antialias=true:autohint=true",
         "Noto Color Emoji:style=Regular:pixelsize=12:antialias=true:autohint=true",
-        "Hack:style=Bold:pixelsize=14:antialias=true:autohint=true",
 };
 static int borderpx = 3;
 /*
@@ -275,7 +275,7 @@ static Shortcut shortcuts[] = {
         { MODKEY,               XK_c,           clipcopy,       {.i =  0} },
         { MODKEY,               XK_v,           clippaste,      {.i =  0} },
         { ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
-        { ShiftMask,            XK_Return,      newterm,        {.i =  0} },
+        { TERMMOD,              XK_Return,      newterm,        {.i =  0} },
         { TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
         { XK_NO_MOD,            XK_F6,          swapcolors,     {.i =  0} },
         { ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
