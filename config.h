@@ -30,7 +30,7 @@ char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 1;
-static float chscale = 1;
+static float chscale = 1.1;
 
 /*
  * word delimiter string
@@ -282,7 +282,7 @@ static Shortcut shortcuts[] = {
         { ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
         { MODKEY,               XK_u,           externalpipe,   {.v = openurlcmd } },
         { MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
-        { ShiftMask,            XK_c,           externalpipe,   {.v = copyoutput } },
+        { MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
 };
 
 /*
