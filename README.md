@@ -9,7 +9,7 @@ This is my personal build of st, the simple terminal by suckless. It has everyth
 1. compatibility with ~/.Xresources file
 
 ## Emojis
-If st crashes, when viewing emojis, make sure to install the package [libxft-bgra](https://aur.archlinux.org/packages/lbxft-bgra) from the AUR
+If st crashes, when viewing emojis, make sure to install the package [libxft-bgra](https://aur.archlinux.org/packages/libxft-bgra) from the AUR
 
 ## How to install
 1. Clone the repository
