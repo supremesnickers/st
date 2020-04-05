@@ -5,14 +5,14 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMonoMedium Nerd Font:style=Medium:pixelsize=14:antialias=true:autohint=true";
+static char *font = "JetBrains Mono Medium:style=Medium:pixelsize=14:antialias=true:autohint=true";
 /* Spare fonts */
 
 static char *font2[] = {
         "Font Awesome:style=Regular:pixelsize=12:antialias=true:autohint=true",
         "Noto Color Emoji:style=Regular:pixelsize=12:antialias=true:autohint=true",
 };
-static int borderpx = 3;
+static int borderpx = 5;
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
@@ -221,9 +221,9 @@ ResourcePref resources[] = {
                 { "color13",      STRING,  &colorname[13] },
                 { "color14",      STRING,  &colorname[14] },
                 { "color15",      STRING,  &colorname[15] },
-                { "background",   STRING,  &colorname[256] },
-                { "foreground",   STRING,  &colorname[257] },
-                { "cursorColor",  STRING,  &colorname[258] },
+                { "background",   STRING,  &colorname[258] },
+                { "foreground",   STRING,  &colorname[259] },
+                { "cursorColor",  STRING,  &colorname[256] },
                 { "termname",     STRING,  &termname },
                 { "shell",        STRING,  &shell },
                 { "xfps",         INTEGER, &xfps },
