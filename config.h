@@ -204,6 +204,7 @@ static int forcemousemod = ShiftMask;
  * Xresources preferences to load at startup
  */
 ResourcePref resources[] = {
+                { "alpha",        FLOAT,   &alpha },
                 { "font",         STRING,  &font },
                 { "color0",       STRING,  &colorname[0] },
                 { "color1",       STRING,  &colorname[1] },
@@ -280,9 +281,12 @@ static Shortcut shortcuts[] = {
         { XK_NO_MOD,            XK_F6,          swapcolors,     {.i =  0} },
         { ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
         { ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
-        { MODKEY,               XK_u,           externalpipe,   {.v = openurlcmd } },
+	{ MODKEY,               XK_u,           kscrollup,      {.i = -1} },
+	{ MODKEY,               XK_d,           kscrolldown,    {.i = -1} },
+        { MODKEY,               XK_o,           externalpipe,   {.v = openurlcmd } },
         { MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
         { MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
+
 };
 
 /*
