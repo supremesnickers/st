@@ -70,7 +70,7 @@ static unsigned int cursorthickness = 2;
  * 0: disable (render all U25XX glyphs normally from the font).
  */
 const int boxdraw = 1;
-const int boxdraw_bold = 0;
+const int boxdraw_bold = 1;
 
 /* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
 const int boxdraw_braille = 0;
@@ -106,7 +106,7 @@ float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-        /* solarized dark */
+        /* gruvbox dark */
         "#282828",  /*  0: black    */
         "#cc241d",  /*  1: red      */
         "#98971a",  /*  2: green    */
@@ -132,7 +132,7 @@ static const char *colorname[] = {
 
 /* Terminal colors for alternate (light) palette */
 static const char *altcolorname[] = {
-        /* solarized light */
+        /* gruvbox light */
         "#fbf1c7",  /*  0: black    */
         "#cc241d",  /*  1: red      */
         "#98971a",  /*  2: green    */
@@ -287,7 +287,7 @@ static Shortcut shortcuts[] = {
         { MODKEY,               XK_d,           kscrolldown,    {.i = -1} },
         { MODKEY,               XK_o,           externalpipe,   {.v = openurlcmd } },
         { MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
-        { MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
+        { MODKEY,               XK_u,           externalpipe,   {.v = copyoutput } },
 
 };
 
