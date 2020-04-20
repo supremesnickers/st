@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 
-static char *font = "JetBrains Mono Medium:style=Medium:pixelsize=14:antialias=true:autohint=true";
+static char *font = "JetBrainsMonoMedium Nerd Font Mono:style=Medium:pixelsize=14:antialias=true:autohint=true";
 
 /* Spare fonts */
 
@@ -99,7 +99,7 @@ char *termname = "st-256color";
  *
  *      stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 /* bg opacity */
 float alpha = 0.8;
@@ -287,8 +287,7 @@ static Shortcut shortcuts[] = {
         { MODKEY,               XK_d,           kscrolldown,    {.i = -1} },
         { MODKEY,               XK_o,           externalpipe,   {.v = openurlcmd } },
         { MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
-        { MODKEY,               XK_u,           externalpipe,   {.v = copyoutput } },
-
+        { TERMMOD,              XK_u,           externalpipe,   {.v = copyoutput } },
 };
 
 /*
