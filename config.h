@@ -14,7 +14,7 @@ static char *font2[] = {
         "Font Awesome:style=Regular:pixelsize=12:antialias=true:autohint=true",
         "Noto Color Emoji:style=Regular:pixelsize=12:antialias=true:autohint=true",
 };
-static int borderpx = 5;
+static int borderpx = 10;
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
@@ -32,7 +32,7 @@ char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 1;
-static float chscale = 1.1;
+static float chscale = 1;
 
 /*
  * word delimiter string
@@ -126,8 +126,8 @@ static const char *colorname[] = {
         [255] = 0,
         "#d5c4a1", /* 256 -> cursor */
         "#555555", /* 257 -> rev cursor*/
-        "#282828", /* 258 -> bg */
-        "#d5c4a1", /* 259 -> fg */
+        "#1d2021", /* 258 -> bg */
+        "#ebdbb2", /* 259 -> fg */
 };
 
 /* Terminal colors for alternate (light) palette */
@@ -153,8 +153,8 @@ static const char *altcolorname[] = {
         /* more colors can be added after 255 to use with DefaultXX */
         "#555555", /* 257 -> rev cursor*/
         "#d5c4a1", /* 256 -> cursor */
-        "#ebdbb2", /* 259 -> fg */
-        "#282828", /* 258 -> bg */
+        "#fbf1c7", /* 258 -> bg */
+        "#f2e5bc", /* 259 -> fg */
 };
 
 /*
