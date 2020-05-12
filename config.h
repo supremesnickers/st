@@ -1,4 +1,4 @@
-/* See LICENSE file for copyright and license details. */
+//[> See LICENSE file for copyright and license details. <]
 
 /*
  * appearance
@@ -9,12 +9,11 @@
 static char *font = "JetBrainsMonoMedium Nerd Font Mono:style=Medium:pixelsize=14:antialias=true:autohint=true";
 
 /* Spare fonts */
-
 static char *font2[] = {
         "Font Awesome:style=Regular:pixelsize=12:antialias=true:autohint=true",
         "Noto Color Emoji:style=Regular:pixelsize=12:antialias=true:autohint=true",
 };
-static int borderpx = 10;
+static int borderpx = 12;
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
@@ -23,7 +22,7 @@ static int borderpx = 10;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/bash";
 char *utmp = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
@@ -73,7 +72,7 @@ const int boxdraw = 1;
 const int boxdraw_bold = 1;
 
 /* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
-const int boxdraw_braille = 0;
+const int boxdraw_braille = 1;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
@@ -107,7 +106,7 @@ float alpha = 0.8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
         /* gruvbox dark */
-        "#282828",  /*  0: black    */
+        "#0d0d0d",  /*  0: black    */
         "#cc241d",  /*  1: red      */
         "#98971a",  /*  2: green    */
         "#d79921",  /*  3: yellow   */
@@ -126,7 +125,7 @@ static const char *colorname[] = {
         [255] = 0,
         "#d5c4a1", /* 256 -> cursor */
         "#555555", /* 257 -> rev cursor*/
-        "#1d2021", /* 258 -> bg */
+        "#0d0d0d", /* 258 -> bg */
         "#ebdbb2", /* 259 -> fg */
 };
 
@@ -154,7 +153,7 @@ static const char *altcolorname[] = {
         "#555555", /* 257 -> rev cursor*/
         "#d5c4a1", /* 256 -> cursor */
         "#fbf1c7", /* 258 -> bg */
-        "#f2e5bc", /* 259 -> fg */
+        "#3c3836", /* 259 -> fg */
 };
 
 /*
