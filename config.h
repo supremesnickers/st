@@ -13,7 +13,7 @@ static char *font2[] = {
         "Font Awesome:style=Regular:pixelsize=12:antialias=true:autohint=true",
         "Noto Color Emoji:style=Regular:pixelsize=12:antialias=true:autohint=true",
 };
-static int borderpx = 12;
+static int borderpx = 10;
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
@@ -72,7 +72,7 @@ const int boxdraw = 1;
 const int boxdraw_bold = 1;
 
 /* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
-const int boxdraw_braille = 1;
+const int boxdraw_braille = 0;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
@@ -153,7 +153,7 @@ static const char *altcolorname[] = {
         "#555555", /* 257 -> rev cursor*/
         "#d5c4a1", /* 256 -> cursor */
         "#fbf1c7", /* 258 -> bg */
-        "#3c3836", /* 259 -> fg */
+        "#282828", /* 259 -> fg */
 };
 
 /*
@@ -273,6 +273,8 @@ static Shortcut shortcuts[] = {
         { XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
         { TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
         { TERMMOD,              XK_Next,        zoom,           {.f = -1} },
+        { TERMMOD,              XK_k,           zoom,           {.f = +1} },
+        { TERMMOD,              XK_j,           zoom,           {.f = -1} },
         { MODKEY,               XK_Home,        zoomreset,      {.f =  0} },
         { MODKEY,               XK_c,           clipcopy,       {.i =  0} },
         { MODKEY,               XK_v,           clippaste,      {.i =  0} },
@@ -284,9 +286,9 @@ static Shortcut shortcuts[] = {
         { ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
         { MODKEY,               XK_u,           kscrollup,      {.i = -1} },
         { MODKEY,               XK_d,           kscrolldown,    {.i = -1} },
-        { MODKEY,               XK_o,           externalpipe,   {.v = openurlcmd } },
-        { MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
-        { TERMMOD,              XK_u,           externalpipe,   {.v = copyoutput } },
+        { Mod4Mask,               XK_o,           externalpipe,   {.v = openurlcmd } },
+        { Mod4Mask,               XK_y,           externalpipe,   {.v = copyurlcmd } },
+        { Mod4Mask,              XK_u,           externalpipe,   {.v = copyoutput } },
 };
 
 /*
